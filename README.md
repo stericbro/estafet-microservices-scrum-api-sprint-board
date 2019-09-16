@@ -3,9 +3,9 @@ Microservices api retrieving information formatted for a sprint board.
 ## What is this?
 This application is a microservice provides an API that aggregates sprint, story and tasks data to construct a sprint board when for a specific sprint.
 
-Each microservice has it's own git repository, but there is a master git repository that contains links to all of the repositories [here](https://github.com/Estafet-LTD/estafet-microservices-scrum).
+Each microservice has it's own git repository, but there is a master git repository that contains links to all of the repositories [here](https://github.com/stericbro/estafet-microservices-scrum).
 ## Getting Started
-You can find a detailed explanation of how to install this (and other microservices) [here](https://github.com/Estafet-LTD/estafet-microservices-scrum#getting-started).
+You can find a detailed explanation of how to install this (and other microservices) [here](https://github.com/stericbro/estafet-microservices-scrum#getting-started).
 ## API Interface
 
 ### Sprint Board JSON object
