@@ -2,26 +2,26 @@ package com.estafet.microservices.api.board.model;
 
 public class AcceptanceCriterion {
 
-	private int id;
+    private int id;
 
-	private String description;
+    private String description;
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
 
-	public AcceptanceCriterion setDescription(String description) {
-		this.description = description;
-		return this;
-	}
+    public AcceptanceCriterion setDescription(String description) {
+        this.description = description;
+        return this;
+    }
 
 }

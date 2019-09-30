@@ -11,18 +11,18 @@ import com.estafet.microservices.api.board.service.SprintBoardService;
 @RestController
 public class SprintBoardController {
 
-	@Autowired
-	private SprintBoardService sprintBoardService;
+    @Autowired
+    private SprintBoardService sprintBoardService;
 
-	@GetMapping("/api")
-	public SprintBoard getAPI() {
-		return SprintBoard.getAPI();
-	}
+    @GetMapping("/api")
+    public SprintBoard getAPI() {
+        return SprintBoard.getAPI();
+    }
 
-	@GetMapping("/sprint/{sprintId}/board")
-	public SprintBoard getSprintBoard(@PathVariable int sprintId) {
-		return sprintBoardService.getSprintBoard(sprintId);
-	}
+    @GetMapping("/sprint/{sprintId}/board")
+    public SprintBoard getSprintBoard(@PathVariable int sprintId) {
+        return sprintBoardService.getSprintBoard(sprintId);
+    }
 
 
 

@@ -15,21 +15,21 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class TaskService {
 
-	@Autowired
-	RestTemplate restTemplate;
+    @Autowired
+    RestTemplate restTemplate;
 
-	@SuppressWarnings({ "rawtypes" })
-	public List<Task> getTasks(Story story) {
-		List objects = restTemplate.getForObject(System.getenv("TASK_API_SERVICE_URI") + "/story/{storyId}/tasks",
-				List.class, story.getId());
-		List<Task> tasks = new ArrayList<Task>();
-		ObjectMapper mapper = new ObjectMapper();
-		for (Object object : objects) {
-			Task task = mapper.convertValue(object, new TypeReference<Task>() {
-			});
-			tasks.add(task);
-		}
-		return tasks;
-	}
+    @SuppressWarnings({ "rawtypes" })
+    public List<Task> getTasks(Story story) {
+        List objects = restTemplate.getForObject(System.getenv("TASK_API_SERVICE_URI") + "/story/{storyId}/tasks",
+                List.class, story.getId());
+        List<Task> tasks = new ArrayList<Task>();
+        ObjectMapper mapper = new ObjectMapper();
+        for (Object object : objects) {
+            Task task = mapper.convertValue(object, new TypeReference<Task>() {
+            });
+            tasks.add(task);
+        }
+        return tasks;
+    }
 
 }

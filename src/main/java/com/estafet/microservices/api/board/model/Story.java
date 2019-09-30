@@ -5,28 +5,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Story {
 
-	private int id;
+    private int id;
 
-	private Integer sprintId;
+    private Integer sprintId;
 
-	private Integer projectId;
+    private Integer projectId;
 
-	private String title;
+    private String title;
 
-	public String getTitle() {
-		return title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public Integer getSprintId() {
-		return sprintId;
-	}
+    public Integer getSprintId() {
+        return sprintId;
+    }
 
-	public Integer getProjectId() {
-		return projectId;
-	}
+    public Integer getProjectId() {
+        return projectId;
+    }
 
 }

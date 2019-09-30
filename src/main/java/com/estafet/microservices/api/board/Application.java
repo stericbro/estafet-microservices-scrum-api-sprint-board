@@ -16,20 +16,20 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
-	@Bean
-	public io.opentracing.Tracer jaegerTracer() {
-		return new com.uber.jaeger.Configuration("sprint-board",
-				com.uber.jaeger.Configuration.SamplerConfiguration.fromEnv(),
-				com.uber.jaeger.Configuration.ReporterConfiguration.fromEnv()).getTracer();
-	}
+    @Bean
+    public io.opentracing.Tracer jaegerTracer() {
+        return new com.uber.jaeger.Configuration("sprint-board",
+                com.uber.jaeger.Configuration.SamplerConfiguration.fromEnv(),
+                com.uber.jaeger.Configuration.ReporterConfiguration.fromEnv()).getTracer();
+    }
 
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
-		return restTemplateBuilder.build();
-	}
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
+        return restTemplateBuilder.build();
+    }
 
 }
