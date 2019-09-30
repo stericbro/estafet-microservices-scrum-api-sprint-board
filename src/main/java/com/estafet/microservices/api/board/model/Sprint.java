@@ -1,7 +1,7 @@
 package com.estafet.microservices.api.board.model;
 
 public class Sprint {
-	
+
 	private Integer id;
 
 	private String startDate;

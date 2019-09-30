@@ -14,7 +14,7 @@ public class SprintBoardService {
 
 	@Autowired
 	private StoryService storyService;
-	
+
 	@Autowired
 	private TaskService taskService;
 

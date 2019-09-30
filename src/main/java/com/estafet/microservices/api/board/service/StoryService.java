@@ -19,7 +19,7 @@ public class StoryService {
 
 	@Autowired
 	private RestTemplate restTemplate;
-	
+
 	@SuppressWarnings("rawtypes")
 	public List<Story> getStories(Sprint sprint) {
 		Map<String, Integer> params = new HashMap<String, Integer>();
@@ -37,5 +37,5 @@ public class StoryService {
 		}
 		return stories;
 	}
-	
+
 }

@@ -9,7 +9,7 @@ import com.estafet.microservices.api.board.service.TaskService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class SprintBoard {
-	
+
 	@JsonIgnore
 	private TaskService taskService;
 
@@ -22,7 +22,7 @@ public class SprintBoard {
 	private List<Task> completed = new ArrayList<Task>();
 
 	SprintBoard() {}
-	
+
 	public SprintBoard(TaskService taskService) {
 		this.taskService = taskService;
 	}
@@ -82,11 +82,11 @@ public class SprintBoard {
 	public List<Task> getCompleted() {
 		return completed;
 	}
-	
+
 	public boolean isComplete() {
 		return todo.isEmpty() && inProgress.isEmpty() && !completed.isEmpty();
 	}
-	
+
 	@JsonIgnore
 	public List<Task> getIncompletedTasks() {
 		List<Task> incomplete = new ArrayList<Task>();
@@ -94,7 +94,7 @@ public class SprintBoard {
 		incomplete.addAll(todo);
 		return incomplete;
 	}
-	
+
 	@JsonIgnore
 	public Set<Integer> getIncompleteStoryIds() {
 		Set<Integer> ids = new HashSet<Integer>();
@@ -103,7 +103,7 @@ public class SprintBoard {
 		}
 		return ids;
 	}
-	
+
 	public static SprintBoard getAPI() {
 		SprintBoard board = new SprintBoard();
 		board.todo.add(Task.getAPI());

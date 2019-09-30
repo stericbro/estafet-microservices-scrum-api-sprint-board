@@ -11,7 +11,7 @@ public class SprintService {
 
 	@Autowired
 	private RestTemplate restTemplate;
-	
+
 	public Sprint getSprint(int sprintId) {
 		return restTemplate.getForObject(System.getenv("SPRINT_API_SERVICE_URI") + "/sprint/{sprintId}",
 				Sprint.class, sprintId);
